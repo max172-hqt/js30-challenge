@@ -1,5 +1,10 @@
 'use strict'
 
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return;
+  e.target.classList.remove('playing');
+}
+
 function playSound(e) {
   const el = document.querySelector(`div[data-key="${e.keyCode}"]`);
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
@@ -10,9 +15,9 @@ function playSound(e) {
   audio.play();
 };
 
-window.addEventListener('keydown', playSound);
-
 const keys = document.querySelectorAll('.key');
 keys.forEach(
-  key => key.addEventListener('transitionend', () => key.classList.remove('playing'))
+  key => key.addEventListener('transitionend', removeTransition)
 );
+window.addEventListener('keydown', playSound);
+
