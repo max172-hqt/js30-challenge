@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: gray;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    background: white;
+    border-radius: 50%;
+    padding: 1em;
+    border: 10px solid black;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    /* transition: all 0.05s; */
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
