@@ -1,0 +1,35 @@
+:root {
+    --base: #193549;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+body {
+    background-color: #193549;
+    font-family: 'helvetica neue', sans-serif;
+    text-align: center;
+}
+
+h2, label {
+    color: white;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.controls {
+    margin-bottom: 2em;
+}
+
+label {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
